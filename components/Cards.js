@@ -43,3 +43,35 @@ axios
   .catch(function (error) {
     console.log(error);
   });
+
+  function articleMaker(object) {
+
+    const div = document.createElement("div");
+    const div1 = document.createElement("div");
+    const div2 = document.createElement("div");
+    const div3 = document.createElement("div");
+    const img = document.createElement("img");
+    const span = document.createElement("span");
+  
+  
+    div.classList.add("card");
+    div1.classList.add("headline");
+    div2.classList.add("author");
+    div3.classList.add("img-container");
+  
+    div1.innerHTML = object.headline;
+    img.src = object.authorPhoto;
+    span.innerHTML = "By " + object.authorName;
+  
+    div.appendChild(div1);
+    div.appendChild(div2);
+    div2.appendChild(div3);
+    div3.appendChild(img);
+    div2.appendChild(span);
+  
+    div.addEventListener("click", () => {
+      console.log(object.headline);
+    });
+  
+    return div;
+  }
