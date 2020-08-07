@@ -59,9 +59,9 @@ axios
     div2.classList.add("author");
     div3.classList.add("img-container");
   
-    div1.innerHTML = object.headline;
+    div1.textContent= object.headline;
     img.src = object.authorPhoto;
-    span.innerHTML = "By " + object.authorName;
+    span.textContent = "By " + object.authorName;
   
     div.appendChild(div1);
     div.appendChild(div2);
